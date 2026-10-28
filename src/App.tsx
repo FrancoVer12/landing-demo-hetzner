@@ -1,20 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Zap, Layers, Blocks, Quote } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Lanzá Lab — Creá y lanzá apps web sin programar" },
-      { name: "description", content: "Academia y agencia no-code: aprendé a crear, lanzar y escalar aplicaciones web sin escribir código." },
-      { property: "og:title", content: "Lanzá Lab — Apps web sin programar" },
-      { property: "og:description", content: "Aprendé a crear y lanzar tu app web en semanas, no meses." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Index,
-});
+import hero from "./assets/hero.jpg";
 
 const features = [
   { icon: Zap, title: "Rápido", text: "Del boceto a tu primera versión online en días. Validá tu idea antes que nadie." },
@@ -28,7 +13,7 @@ const testimonials = [
   { name: "Lucía P.", role: "Emprendedora", text: "El acompañamiento fue clave. Mi marketplace facturó en el primer mes." },
 ];
 
-function Index() {
+export default function App() {
   return (
     <div className="min-h-screen">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
